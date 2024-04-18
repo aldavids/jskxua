@@ -76,6 +76,21 @@
           head.removeChild(inlineSripts[_i2]);
         }
       }
+
+      customizeLinks(widget); // Call customizeLinks after loading scripts
     }
+  }
+
+  function customizeLinks(widget) {
+    var titles = widget.querySelectorAll('.title'); // Select show titles
+    var djs = widget.querySelectorAll('.djs'); // Select DJ elements
+
+    titles.forEach(function (title) {
+      title.style.color = '#9D2235'; // Set show title color to cardinal red
+    });
+
+    djs.forEach(function (dj) {
+      dj.style.color = '#777777'; // Set DJ color to grey
+    });
   }
 })();
